@@ -1,0 +1,33 @@
+<%- include("header"); -%>
+
+
+
+
+  <div class="box" id="heading">
+    <h1 > <%= listType %> </h1>
+  </div>
+  <div class="box">
+<form action="/delete" method="post">
+<% toDoItems.forEach(item => { %> 
+  <div class="item">
+    <input type="checkbox" name="checkbox" value="<%= item._id%>"  onChange="this.form.submit()" >
+    <p> <%= item.name ;%> </p>
+ </div>
+<%})%>
+<input type="hidden" name="toDoListName" value="<%= listType %>">
+</form>
+    <form class="item" action="/" method="post">
+     <input type="text" name="newItem" value="" placeholder="New Item" maxlength="25" autocomplete="off" required>
+     <button type="submit" name="listTypeName" value= "<%= listType %>" >+</button>
+     
+
+    </form>
+</div>
+
+
+<form class="add-list-form" action="/addlist" method="post">
+  <label class="addlist-label" for="">Add a new list</label>
+    <input class="add-list" name="userNewList" type="text" maxlength="15" placeholder="New list Name" required>
+  <button class="add-list-btn" type="submit">+</button> 
+</form>
+<%- include("footer"); -%>

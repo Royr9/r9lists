@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>To do List</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <a class="lists-links" href="http://localhost:3000/">Home</a>
+  <% ListCollection.forEach( list => {%>
+    <a class="lists-links" href="http://localhost:3000/lists/<%=list.name%>"><%= _.capitalize(_.lowerCase(list.name));%></a> 
+  <%});%>
+  
+ 
+  
+   
