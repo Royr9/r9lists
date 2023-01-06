@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  <a class="lists-links" href="http://localhost:3000/">Home</a>
+  <a class="lists-links" href="/">Home</a>
   <% ListCollection.forEach( list => {%>
-    <a class="lists-links" href="http://localhost:3000/lists/<%=list.name%>"><%= _.capitalize(_.lowerCase(list.name));%></a> 
+    <a class="lists-links" href="/lists/<%=list.name%>"><%= _.capitalize(_.lowerCase(list.name));%></a> 
   <%});%>
   
  
