@@ -14,9 +14,9 @@ const day = date.getDate();
  
 
 // mongoose/mongodb database: 
-mongoose.set('strictQuery', false);
-// to connecto locally:  mongodb://0.0.0.0:27017/todoListDB
-mongoose.connect(process.env.DATABASE_URL || "mongodb://0.0.0.0:27017/todoListDB" , {useNewUrlParser: true});
+// mongoose.set('strictQuery', false);
+// // to connecto locally:  mongodb://0.0.0.0:27017/todoListDB
+// mongoose.connect(process.env.DATABASE_URL || "mongodb+srv://roy-admin1:5ZOyBqWdHniRBpT4@todolistcluster1.r6ene6j.mongodb.net/todoListDB" , {useNewUrlParser: true});
 
   //atlas cluster:  mongodb+srv://roy-admin1:5ZOyBqWdHniRBpT4@todolistcluster1.r6ene6j.mongodb.net/todoListDB
 
