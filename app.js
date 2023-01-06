@@ -19,7 +19,7 @@ mongoose.set('strictQuery', false);
 
 
 async function main() {
-  await mongoose.connect(process.env.DATABASE_URL || "mongodb+srv://roy-admin1:5ZOyBqWdHniRBpT4@todolistcluster1.r6ene6j.mongodb.net/todoListDB" , {useNewUrlParser: true});
+  await mongoose.connect( "mongodb+srv://roy-admin1:5ZOyBqWdHniRBpT4@todolistcluster1.r6ene6j.mongodb.net/todoListDB" , {useNewUrlParser: true});
 }
 main().catch(err => console.log(err));
 
