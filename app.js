@@ -189,17 +189,23 @@ res.redirect("/lists/" + userNewList);
   }
  }
   });
- 
-  
-  
   });
 
 
 
 
+const port = process.env.PORT || 3000;
 
 
 
-app.listen(process.env.PORT || 3000, function(){
-  console.log(" Todolist Server has started on port 3000");
-});
+
+
+app.get("/", (req, res) => res.type('html').send(html));
+
+
+
+
+
+
+
+app.listen(port, () => console.log(`todolist app listening on port ${port}!`));
