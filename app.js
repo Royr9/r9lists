@@ -3,7 +3,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const _ = require("lodash");
-const https = require("express");
+const https = require("https");
 const date = require(__dirname + "/date.js");
 const app = express();
 app.locals._ = _;
@@ -194,18 +194,18 @@ res.redirect("/lists/" + userNewList);
 
 
 
+
+
+
+
+
+
+// app.get("/", (req, res) => res.type('html').send(html));
+
+
+
+
+
+
 const port = process.env.PORT || 3000;
-
-
-
-
-
-app.get("/", (req, res) => res.type('html').send(html));
-
-
-
-
-
-
-
 app.listen(port, () => console.log(`todolist app listening on port ${port}!`));
